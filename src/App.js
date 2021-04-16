@@ -42,25 +42,30 @@ function App() {
   }
   return (
 
-    <div className="App" style={{display:"flex",flexDirection:"column",justifyContent: "center",alignItems: "center"}}>
+    <div className="App" >
 
+     <div style={{display:"flex",flexDirection:"column",justifyContent: "center",alignItems: "center", width: "100%" }}>
      <h1>TO_DO </h1> 
 
     <form>
 
-    < TextField id="standard-basic" label="Write a to-do" value={todoInput} onChange={todoInputHandler} />
+    < TextField id="standard-basic" label="Write a to-do" value={todoInput} style={{width: "90vw", maxWidth: "500px"}} onChange={todoInputHandler} />
 
     <Button type = "submit" variant="contained" onClick = {addTodo} style={{display: "none"}}>Add</Button>
 
     </form>
-     
+ 
+    <div style={{width: "90vw", maxWidth: "500px" , marginTop: "24px"}} >
     {todos.map((todo) => (
-       <TodoListItem 
-       todo={todo.todo}
-        is_in_progress={todo.is_in_progress}
-         id={todo.id} />
+    <TodoListItem 
+    todo={todo.todo}
+    is_in_progress={todo.is_in_progress}
+    id={todo.id} />
 
     ))}
+    </div>
+
+     </div>
 
     </div>
 
@@ -68,3 +73,4 @@ function App() {
 }
 
 export default App;
+

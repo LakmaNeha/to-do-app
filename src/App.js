@@ -42,7 +42,7 @@ function App() {
   }
   return (
 
-    <div className="App" style={{display:"flex",flexDirection:"column",justifyContent: "center",alignItems: "center",}}>
+    <div className="App" style={{display:"flex",flexDirection:"column",justifyContent: "center",alignItems: "center"}}>
 
      <h1>TO_DO </h1> 
 
@@ -55,10 +55,10 @@ function App() {
     </form>
      
     {todos.map((todo) => (
-        <TodoListItem 
-        todo={todo.todo}
+       <TodoListItem 
+       todo={todo.todo}
         is_in_progress={todo.is_in_progress}
-        id={todo.id} />
+         id={todo.id} />
 
     ))}
 
